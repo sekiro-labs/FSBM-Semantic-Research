@@ -1,6 +1,7 @@
 """Offline PDF enrichment checks. Every external response is mocked."""
 
 import json
+import http.client
 import tempfile
 import unittest
 from pathlib import Path
@@ -49,6 +50,83 @@ class FakeClient:
 
 
 class PdfEnrichmentTests(unittest.TestCase):
+    def test_url_with_spaces_is_encoded_without_breaking_components(self):
+        raw = "https://example.org/pdf?id=1&filename=Effects of PGPR.pdf#page 2"
+        expected = "https://example.org/pdf?id=1&filename=Effects%20of%20PGPR.pdf#page%202"
+        self.assertEqual(pdf.normalize_url(raw), expected)
+        row = publication()
+        client = FakeClient(oa_work(raw))
+        with tempfile.TemporaryDirectory() as folder:
+            result = pdf.enrich_publication(row, client, download=True, papers_dir=folder)
+            self.assertEqual(result["pdf_status"], "downloaded")
+            self.assertEqual(result["pdf_url"], expected)
+            self.assertEqual(client.pdf_calls, [expected])
+            self.assertEqual(client.robots_calls, [expected])
+
+    def test_already_percent_encoded_url_remains_encoded(self):
+        url = "https://example.org/a%20b.pdf?filename=Effects%20of%20PGPR.pdf&x=1%2F2"
+        self.assertEqual(pdf.normalize_url(url), url)
+        self.assertEqual(pdf.normalize_url("https://example.org/a\nb.pdf"),
+                         "https://example.org/a%0Ab.pdf")
+
+    def test_http_client_uses_normalized_request_target_without_network(self):
+        class Response:
+            status = 200
+            headers = {"Content-Type": "application/json"}
+            def __init__(self, url): self.url = url
+            def __enter__(self): return self
+            def __exit__(self, *_): return False
+            def geturl(self): return self.url
+            def read(self, _): return b"{}"
+        class Opener:
+            requested = None
+            def open(self, request, timeout):
+                self.requested = request.full_url
+                return Response(request.full_url)
+        opener = Opener()
+        client = pdf.PublicClient(opener=opener, delay=0, retries=0)
+        client.get_json("https://example.org/pdf?id=1&filename=Effects of PGPR.pdf")
+        self.assertEqual(opener.requested,
+                         "https://example.org/pdf?id=1&filename=Effects%20of%20PGPR.pdf")
+
+    def test_malformed_candidate_and_unexpected_network_error_become_record_errors(self):
+        malformed = pdf.enrich_publication(publication(), FakeClient(oa_work("not a URL")))
+        self.assertEqual(malformed["pdf_status"], "error")
+        self.assertIn("valid public PDF URL", malformed["pdf_error"])
+        class BrokenClient(FakeClient):
+            def get_pdf(self, url):
+                raise http.client.InvalidURL("bad request target")
+        broken = pdf.enrich_publication(publication(), BrokenClient(), download=True)
+        self.assertEqual(broken["pdf_status"], "error")
+        self.assertIn("InvalidURL: bad request target", broken["pdf_error"])
+
+    def test_one_failed_publication_does_not_stop_resume_or_later_records(self):
+        rows = [publication("one"), publication("two")]
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            source, output, report = [root / name for name in ("source.json", "output.json", "report.json")]
+            source.write_text(json.dumps(rows), encoding="utf-8")
+            class FlakyClient(FakeClient):
+                def get_pdf(self, url):
+                    if len(self.pdf_calls) == 0:
+                        self.pdf_calls.append(url)
+                        raise http.client.InvalidURL("simulated bad URL")
+                    return super().get_pdf(url)
+            client = FlakyClient()
+            summary = pdf.run(source=source, output=output, report_path=report, papers_dir=root,
+                              limit=2, download=True, client=client)
+            self.assertEqual(summary["checked_publications"], 2)
+            statuses = {row["article_id"]: row["pdf_status"] for row in
+                        json.loads(output.read_text(encoding="utf-8"))["records"]}
+            self.assertEqual(statuses, {"one": "error", "two": "downloaded"})
+            calls = len(client.pdf_calls)
+            pdf.run(source=source, output=output, report_path=report, papers_dir=root,
+                    limit=2, download=True, client=client)
+            self.assertEqual(len(client.pdf_calls), calls + 1)
+            statuses = {row["article_id"]: row["pdf_status"] for row in
+                        json.loads(output.read_text(encoding="utf-8"))["records"]}
+            self.assertEqual(statuses, {"one": "downloaded", "two": "downloaded"})
+
     def test_open_access_location_and_provenance(self):
         row = publication()
         result = pdf.enrich_publication(row, FakeClient())

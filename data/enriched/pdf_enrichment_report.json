@@ -1,16 +1,17 @@
 {
   "source_publications": 959,
-  "selected_publications": 50,
-  "checked_publications": 50,
-  "pdf_candidates": 13,
-  "downloaded_pdfs": 1,
+  "selected_publications": 959,
+  "checked_publications": 231,
+  "pdf_candidates": 74,
+  "downloaded_pdfs": 11,
   "statuses": {
-    "downloaded": 1,
-    "error": 1,
-    "invalid_pdf": 6,
-    "not_found": 37,
-    "restricted": 1,
-    "robots_disallowed": 4
+    "downloaded": 11,
+    "error": 2,
+    "invalid_pdf": 17,
+    "not_found": 156,
+    "rate_limited": 1,
+    "restricted": 6,
+    "robots_disallowed": 38
   },
-  "updated_at": "2026-09-20T22:20:49.052631+00:00"
+  "updated_at": "2026-09-20T22:40:50.875377+00:00"
 }

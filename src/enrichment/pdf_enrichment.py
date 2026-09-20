@@ -6,6 +6,7 @@ No network request occurs when this module is imported.
 
 import argparse
 import hashlib
+import http.client
 import ipaddress
 import json
 import logging
@@ -17,7 +18,7 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.error import HTTPError, URLError
-from urllib.parse import quote, unquote, urlencode, urlsplit
+from urllib.parse import quote, unquote, urlencode, urlsplit, urlunsplit
 from urllib.request import HTTPRedirectHandler, Request, build_opener
 from urllib.robotparser import RobotFileParser
 
@@ -61,10 +62,9 @@ def utc_now():
 
 
 def safe_public_url(value):
-    if not isinstance(value, str):
-        return False
-    parsed = urlsplit(value)
-    if parsed.scheme not in ("http", "https") or not parsed.hostname or parsed.username or parsed.password:
+    try:
+        parsed = urlsplit(normalize_url(value))
+    except (TypeError, ValueError):
         return False
     host = parsed.hostname.lower()
     if host == "localhost" or host.endswith(".localhost") or host.endswith(".local"):
@@ -74,6 +74,24 @@ def safe_public_url(value):
     except ValueError:
         return True
     return address.is_global
+
+
+def normalize_url(value):
+    """Encode unsafe URL component characters without changing URL delimiters or % escapes."""
+    if not isinstance(value, str) or not re.match(r"^https?://", value, re.IGNORECASE):
+        raise ValueError("Invalid HTTP(S) URL")
+    # urlsplit silently removes CR/LF/TAB; encode them first so the URL retains its meaning.
+    escaped = re.sub(r"[\x00-\x1f\x7f]", lambda match: f"%{ord(match.group()):02X}", value)
+    parsed = urlsplit(escaped)
+    if (not parsed.hostname or parsed.username or parsed.password or
+            re.search(r"[\s%]", parsed.netloc) or parsed.hostname.startswith("-") or
+            not re.fullmatch(r"[A-Za-z0-9.\-\[\]:]+", parsed.netloc)):
+        raise ValueError("Invalid URL authority")
+    _ = parsed.port  # Reject malformed ports before any request is made.
+    return urlunsplit((parsed.scheme, parsed.netloc,
+                       quote(parsed.path, safe="/:@!$&'()*+,;=-._~%"),
+                       quote(parsed.query, safe="/?:@!$'()*+,;=&-._~%"),
+                       quote(parsed.fragment, safe="/?:@!$'()*+,;=&-._~%")))
 
 
 def normalized_title(value):
@@ -136,6 +154,7 @@ class PublicClient:
         self.user_agent = f"FSBM-Semantic-Research/1.0 (academic OA metadata; contact: {email})" if email else "FSBM-Semantic-Research/1.0 (academic OA metadata)"
 
     def _open(self, url, max_bytes):
+        url = normalize_url(url)
         if not safe_public_url(url):
             raise AccessRestricted("Non-public or unsupported URL")
         if self.last_request is not None:
@@ -181,6 +200,7 @@ class PublicClient:
         return self._open(url, MAX_PDF_BYTES)
 
     def robots_allows(self, url):
+        url = normalize_url(url)
         if not safe_public_url(url):
             return False
         parsed = urlsplit(url)
@@ -239,6 +259,7 @@ def oa_pdf_from_work(work):
     locations = [("best_oa_location", work.get("best_oa_location"))]
     locations.extend(("locations", item) for item in work.get("locations") or [])
     candidates = []
+    malformed = False
     for name, location in locations:
         if not isinstance(location, dict) or location.get("is_oa") is not True:
             continue
@@ -247,14 +268,20 @@ def oa_pdf_from_work(work):
             source = location.get("source") or {}
             repository = isinstance(source, dict) and source.get("type") == "repository"
             candidates.append((not repository, name != "best_oa_location", url, name))
+        elif url:
+            malformed = True
     if candidates:
         _, _, url, name = min(candidates)
         return url, f"openalex:{name}"
+    if malformed:
+        raise ValueError("OpenAlex supplied no valid public PDF URL")
     return None, None
 
 
 def discover_pdf(publication, client):
     """Return a public candidate URL and provenance, or no candidate."""
+    if publication.get("pdf_url") and not safe_public_url(publication["pdf_url"]):
+        raise ValueError("Invalid existing PDF URL")
     for field in ("pdf_url", "publication_url"):
         url = publication.get(field)
         if is_explicit_public_pdf(url):
@@ -288,6 +315,9 @@ def download_pdf(publication_id, url, client, papers_dir=PAPERS, force=False):
     path = Path(papers_dir) / safe_pdf_filename(publication_id)
     if valid_existing_pdf(path) and not force:
         return display_path(path), "existing_pdf", {}
+    url = normalize_url(url)
+    if not safe_public_url(url):
+        raise ValueError("Non-public PDF URL")
     if not client.robots_allows(url):
         return None, "robots_disallowed", {"pdf_error": "robots.txt disallows the candidate URL"}
     content, content_type = client.get_pdf(url)
@@ -327,6 +357,9 @@ def enrich_publication(publication, client, *, download=False, papers_dir=PAPERS
         result["doi"] = doi
         if not url:
             return result
+        url = normalize_url(url)
+        if not safe_public_url(url):
+            raise ValueError("Non-public PDF URL")
         result.update(pdf_available=True, pdf_url=url, pdf_source=source, pdf_status="discovered")
         if download:
             local_path, status, details = download_pdf(publication["article_id"], url, client, papers_dir, force)
@@ -340,8 +373,15 @@ def enrich_publication(publication, client, *, download=False, papers_dir=PAPERS
     except AccessRestricted as exc:
         result.update(pdf_status="restricted", pdf_error=str(exc))
         return result
-    except (HTTPError, URLError, TimeoutError, OSError, ValueError, TypeError, KeyError) as exc:
+    except (HTTPError, URLError, TimeoutError, OSError, ValueError, TypeError, KeyError,
+            http.client.HTTPException) as exc:
         result.update(pdf_status="error", pdf_error=f"{type(exc).__name__}: {exc}")
+        LOG.error("PDF enrichment failed for %s: %s", publication.get("article_id"), result["pdf_error"])
+        return result
+    except Exception as exc:
+        # A single unexpected HTTP/library exception must not discard the checkpoint.
+        result.update(pdf_status="error", pdf_error=f"{type(exc).__name__}: {exc}")
+        LOG.exception("Unexpected PDF enrichment failure for %s", publication.get("article_id"))
         return result
 
 
@@ -417,8 +457,15 @@ def run(*, source=SOURCE, output=OUTPUT, report_path=REPORT, papers_dir=PAPERS,
         if previous and download and previous.get("pdf_url") and previous.get("pdf_source") and not force:
             # A previous discovery-only run can be downloaded without another API lookup.
             known_candidate = (previous["pdf_url"], previous["pdf_source"], previous.get("doi"))
-        item = enrich_publication(publication, client, download=download, papers_dir=papers_dir,
-                                  force=force, known_candidate=known_candidate)
+        try:
+            item = enrich_publication(publication, client, download=download, papers_dir=papers_dir,
+                                      force=force, known_candidate=known_candidate)
+        except Exception as exc:
+            LOG.exception("Unexpected failure for publication %s", article_id)
+            item = {**publication, "pdf_available": False, "pdf_url": None, "pdf_local_path": None,
+                    "pdf_source": None, "pdf_status": "error", "pdf_checked_at": utc_now(),
+                    "pdf_error": f"{type(exc).__name__}: {exc}", "doi": extract_doi(publication),
+                    "original_pdf_url": publication.get("pdf_url")}
         records[article_id] = item
         source_label = display_path(source)
         payload = {"schema_version": 1, "source_file": source_label, "source_sha256": source_hash,
