@@ -1,0 +1,17 @@
+{
+  "model_name": "zeroentropy/zembed-1-embedding",
+  "model_revision": "cf13c81f3274394053d166740294f7eea4586f7a",
+  "model_revision_evidence": "single local Hugging Face cache snapshot; legacy manifest did not record revision",
+  "model_dtype": "float32",
+  "embedding_dimension": 2560,
+  "publication_count": 895,
+  "document_format": "abstract_clean/v1",
+  "corpus_sha256": "45dc442501695d65b418cc212f5a65e6cb09ce9eed2d4eb84a0dbeacdd959e25",
+  "legacy_dataset_sha256": "99b3ca3f6fe1a0e2e6e6aa5d89b3f82e48b539f90a3807e2ef68f40e2facd2eb",
+  "legacy_reused": 380,
+  "created_at_utc": "2026-09-20T20:20:12.076974+00:00",
+  "artifact": "data/embeddings/final_publication_embeddings.npz",
+  "index": "data/vector_db_final",
+  "collection": "fsbm_final_45dc44250169",
+  "similarity": "cosine"
+}

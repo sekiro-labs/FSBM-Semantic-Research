@@ -1,0 +1,14 @@
+{
+  "model_name": "zeroentropy/zembed-1-embedding",
+  "model_dtype": "float32",
+  "embedding_dimension": 2560,
+  "publication_count": 380,
+  "dataset_sha256": "99b3ca3f6fe1a0e2e6e6aa5d89b3f82e48b539f90a3807e2ef68f40e2facd2eb",
+  "created_at_utc": "2026-09-20T11:40:34.478698+00:00",
+  "sentence_transformers_version": "6.1.0",
+  "torch_version": "2.14.0+cpu",
+  "artifact": "data\\embeddings\\publication_embeddings.npz",
+  "index": "data\\vector_db",
+  "collection": "fsbm_zembed1_publications",
+  "similarity": "cosine"
+}

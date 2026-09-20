@@ -1,0 +1,87 @@
+{
+  "total_unique_researchers": 77,
+  "researchers_represented_in_publications": 76,
+  "researchers_by_raw_source": {
+    "raw_scholar_data.json": 37,
+    "new_scholar_data.json": 9,
+    "new_scholar_data_batch2.json": 10,
+    "new_scholar_data_batch3.json": 21
+  },
+  "source_counts": {
+    "raw_scholar_data.json": {
+      "schema": "legacy",
+      "researchers": 37,
+      "publications": 430
+    },
+    "new_scholar_data.json": {
+      "schema": "checkpoint",
+      "researchers": 9,
+      "publications": 176
+    },
+    "new_scholar_data_batch2.json": {
+      "schema": "checkpoint",
+      "researchers": 10,
+      "publications": 131
+    },
+    "new_scholar_data_batch3.json": {
+      "schema": "checkpoint",
+      "researchers": 21,
+      "publications": 307
+    }
+  },
+  "researcher_status_distribution": {
+    "legacy": 37,
+    "complete": 8,
+    "in_progress": 1,
+    "partial_limited": 31
+  },
+  "raw_publication_records": 1044,
+  "unique_publications": 959,
+  "duplicate_publications_merged": 85,
+  "publications_with_abstracts": 976,
+  "publications_without_abstracts": 68,
+  "unique_publications_with_abstracts": 895,
+  "unique_publications_without_abstracts": 64,
+  "embedding_eligible": 895,
+  "embedding_ineligible": 64,
+  "exclusion_reasons": {
+    "duplicate_publication": 85,
+    "missing_abstract": 64
+  },
+  "missing_year_or_date": 17,
+  "missing_publication_year": 17,
+  "missing_publication_date": 17,
+  "missing_journal_or_conference": 76,
+  "missing_authors": 0,
+  "missing_citation_count": 0,
+  "publication_urls_available": 547,
+  "pdf_urls_available": 0,
+  "references_available": 0,
+  "publication_raw_source_memberships": {
+    "new_scholar_data.json": 168,
+    "new_scholar_data_batch2.json": 127,
+    "new_scholar_data_batch3.json": 296,
+    "raw_scholar_data.json": 408
+  },
+  "suspicious_or_malformed_records": [
+    {
+      "source": "new_scholar_data.json",
+      "scholar_id": "YMFR4oAAAAJ",
+      "issue": "checkpoint_failure",
+      "status": "blocked"
+    }
+  ],
+  "suspicious_record_counts": {
+    "profiles_without_publications": 1,
+    "raw_publications_without_title": 0,
+    "replacement_character_in_abstract": 0,
+    "implausible_publication_year": 0
+  },
+  "limitations": [
+    "The legacy source does not supply publication URLs, PDF URLs, references, or provenance for individual fields.",
+    "A source affiliation string does not independently establish current FSBM membership.",
+    "Partial checkpoints contain only the publication records saved at collection time.",
+    "Scholar publication IDs are scoped to a researcher; cross-researcher matching requires DOI or exact title, year, and author overlap.",
+    "Original abstracts may already be truncated or contain replacement characters; they are preserved."
+  ]
+}

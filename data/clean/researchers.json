@@ -1,0 +1,1295 @@
+[
+  {
+    "scholar_id": "upOdTrEAAAAJ",
+    "full_name": "Habib BEN LAHMAR",
+    "affiliation": "Professor in computer science at  HASSAN 2 University, Casablanca Faculty  of science Ben M'Sik",
+    "research_interests": null,
+    "total_citations": 2823,
+    "h_index": 25,
+    "i10_index": 63,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "hfAJHyYAAAAJ",
+    "full_name": "sael nawal",
+    "affiliation": "university hassan II casablanca",
+    "research_interests": null,
+    "total_citations": 1889,
+    "h_index": 22,
+    "i10_index": 51,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "2aKw_8kAAAAJ",
+    "full_name": "Said Nouh",
+    "affiliation": "Faculté sciences ben m'sik",
+    "research_interests": null,
+    "total_citations": 122,
+    "h_index": 7,
+    "i10_index": 5,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "C_Gt_7IAAAAJ",
+    "full_name": "KHALID KANDALI",
+    "affiliation": "Professeur d'Informatique, Faculté des Sciences Ben M'sick, Université Hassan II de Casablanca",
+    "research_interests": null,
+    "total_citations": 315,
+    "h_index": 8,
+    "i10_index": 8,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "vGoUWM8AAAAJ",
+    "full_name": "Yassine Elhaouari",
+    "affiliation": "باحث في المسرح ودراسات الفرجة",
+    "research_interests": null,
+    "total_citations": 99,
+    "h_index": 2,
+    "i10_index": 2,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "QOxPeEoAAAAJ",
+    "full_name": "faouzia Benabbou",
+    "affiliation": "University  Hassan  II  of  Casablanca",
+    "research_interests": null,
+    "total_citations": 1737,
+    "h_index": 21,
+    "i10_index": 46,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "3ztbunUAAAAJ",
+    "full_name": "Talea Mohamed",
+    "affiliation": "Université Hassan II de Casablanca",
+    "research_interests": null,
+    "total_citations": 6932,
+    "h_index": 40,
+    "i10_index": 125,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "xztEVFoAAAAJ",
+    "full_name": "Abderrahim Sekkaki",
+    "affiliation": "Université Hassan II",
+    "research_interests": null,
+    "total_citations": 1068,
+    "h_index": 18,
+    "i10_index": 32,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "ErDjoI4AAAAJ",
+    "full_name": "bouchaib bounabat",
+    "affiliation": "Mohammed V  University in  Rabat",
+    "research_interests": null,
+    "total_citations": 1043,
+    "h_index": 15,
+    "i10_index": 28,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "OcbnqJIAAAAJ",
+    "full_name": "Abdelhakim Alali",
+    "affiliation": "enseignant-chercheur en génie électrique",
+    "research_interests": null,
+    "total_citations": 103,
+    "h_index": 5,
+    "i10_index": 2,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "PA70UmkAAAAJ",
+    "full_name": "Abdellatif Slimani",
+    "affiliation": "PhD at Sidi Mohamed Ben Abdellah University",
+    "research_interests": null,
+    "total_citations": 140,
+    "h_index": 8,
+    "i10_index": 7,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "5S8wkxEAAAAJ",
+    "full_name": "GUENNOUN Asmae",
+    "affiliation": "LTI lab, Faculty of Sciences Ben M'sick, University Hassan II of Casablanca",
+    "research_interests": null,
+    "total_citations": 16,
+    "h_index": 3,
+    "i10_index": 0,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "ADagKpAAAAAJ",
+    "full_name": "Aziza Elbakali Kassimi",
+    "affiliation": "Maitre de Conférence. Université Hassan II Casa Maroc",
+    "research_interests": null,
+    "total_citations": 7,
+    "h_index": 2,
+    "i10_index": 0,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "4Rdvq2YAAAAJ",
+    "full_name": "issam Atouf",
+    "affiliation": "université Hassan II Casablanca",
+    "research_interests": null,
+    "total_citations": 726,
+    "h_index": 12,
+    "i10_index": 15,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "WyhosLcAAAAJ",
+    "full_name": "Abdelmoghit ZAARANE",
+    "affiliation": "Faculty of Sciences Ben M'sick, University Hassan II of Casablanca",
+    "research_interests": null,
+    "total_citations": 412,
+    "h_index": 8,
+    "i10_index": 8,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "22H8d4UAAAAJ",
+    "full_name": "Youssef NAIMI",
+    "affiliation": "Hassan II University of Casablanca, Faculty of Science BenM’Sick",
+    "research_interests": null,
+    "total_citations": 710,
+    "h_index": 13,
+    "i10_index": 17,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "J1rNqKQAAAAJ",
+    "full_name": "Tarik CHAFIQ",
+    "affiliation": "Hassan II University",
+    "research_interests": null,
+    "total_citations": 385,
+    "h_index": 10,
+    "i10_index": 10,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "aHie7pgAAAAJ",
+    "full_name": "Sefri Youssef",
+    "affiliation": "Unknown affiliation",
+    "research_interests": null,
+    "total_citations": 59,
+    "h_index": 6,
+    "i10_index": 1,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "GcpkTJYAAAAJ",
+    "full_name": "Abdellah Hamdaoui",
+    "affiliation": "Professeur de mécanique, Université Hassan II de Casablanca",
+    "research_interests": null,
+    "total_citations": 155,
+    "h_index": 8,
+    "i10_index": 7,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "4GVCnygAAAAJ",
+    "full_name": "abdenbi khouaja",
+    "affiliation": "professeur de physique nucléaire, université hassan2 de Casablanca",
+    "research_interests": null,
+    "total_citations": 637,
+    "h_index": 11,
+    "i10_index": 11,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "M9BcVSUAAAAJ",
+    "full_name": "Bouazza Braikat",
+    "affiliation": "Professeur de Mécanique;Université Hassan II de Casablanca",
+    "research_interests": null,
+    "total_citations": 1541,
+    "h_index": 23,
+    "i10_index": 50,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "oDDe4n4AAAAJ",
+    "full_name": "Mohamed IDIRI",
+    "affiliation": "Professeur de physique, Université Hassan II de Casablanca",
+    "research_interests": null,
+    "total_citations": 895,
+    "h_index": 15,
+    "i10_index": 22,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "xpxjPL4AAAAJ",
+    "full_name": "Benlattar mourad",
+    "affiliation": "Hassan II University, Faculty of Sciences Ben M'sik",
+    "research_interests": null,
+    "total_citations": 274,
+    "h_index": 10,
+    "i10_index": 12,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "1W-uvFYAAAAJ",
+    "full_name": "Othmane DAOUDI",
+    "affiliation": "Hassan II University of Casablanca",
+    "research_interests": null,
+    "total_citations": 225,
+    "h_index": 8,
+    "i10_index": 8,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "S26uLeQAAAAJ",
+    "full_name": "Rachida Moultif",
+    "affiliation": "Faculté des sciences Ben M'sik universités Hassan II",
+    "research_interests": null,
+    "total_citations": 82,
+    "h_index": 4,
+    "i10_index": 2,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "iVcGR4wAAAAJ",
+    "full_name": "Ahmed Fekri",
+    "affiliation": "professeur, hydrogéologie , université Hassan II de Casablanca",
+    "research_interests": null,
+    "total_citations": 1112,
+    "h_index": 19,
+    "i10_index": 23,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "5nrRDxAAAAAJ",
+    "full_name": "Allal Labriki",
+    "affiliation": "Enseignant chercheur, Université Hassan II de Casablanca,  Faculté Des sciences Ben M’sick",
+    "research_interests": null,
+    "total_citations": 123,
+    "h_index": 6,
+    "i10_index": 3,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "AKNLvIEAAAAJ",
+    "full_name": "mostafa oukassou",
+    "affiliation": "Université Hassan II de Casablanca",
+    "research_interests": null,
+    "total_citations": 631,
+    "h_index": 17,
+    "i10_index": 21,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "DCymGMEAAAAJ",
+    "full_name": "Mustapha MOUFLIH",
+    "affiliation": "Professeur Hassan II University of Casablanca",
+    "research_interests": null,
+    "total_citations": 1277,
+    "h_index": 15,
+    "i10_index": 19,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "IOR7TaoAAAAJ",
+    "full_name": "Faouziya Haissen",
+    "affiliation": "Hassan II University of Casablanca",
+    "research_interests": null,
+    "total_citations": 925,
+    "h_index": 17,
+    "i10_index": 24,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "AvtWIt8AAAAJ",
+    "full_name": "NADIA BARHOUN",
+    "affiliation": "Professor",
+    "research_interests": null,
+    "total_citations": 820,
+    "h_index": 12,
+    "i10_index": 14,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "TvMcd8oAAAAJ",
+    "full_name": "Soufiane Maimouni",
+    "affiliation": "Université Hassan II de Casablanca",
+    "research_interests": null,
+    "total_citations": 388,
+    "h_index": 11,
+    "i10_index": 11,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "pupxlJ0AAAAJ",
+    "full_name": "Rachid Essamoud",
+    "affiliation": "University Hassan II of Casablanca",
+    "research_interests": null,
+    "total_citations": 209,
+    "h_index": 9,
+    "i10_index": 6,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "0rekc_YAAAAJ",
+    "full_name": "Mohamed MOUMOU",
+    "affiliation": "Laboratory of Analytical and Molecular Chemistry, Faculty of Sciences Ben M’Sik, Hassan II Universit",
+    "research_interests": null,
+    "total_citations": 209,
+    "h_index": 8,
+    "i10_index": 7,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "ZITQAJoAAAAJ",
+    "full_name": "Mohamed Radid",
+    "affiliation": "université Hassan II Casablanca",
+    "research_interests": null,
+    "total_citations": 1503,
+    "h_index": 18,
+    "i10_index": 40,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "BQ-SjWEAAAAJ",
+    "full_name": "Samia YOUSFI",
+    "affiliation": "Enseignante a l'université de m'sila",
+    "research_interests": null,
+    "total_citations": 0,
+    "h_index": 0,
+    "i10_index": 0,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "vdPyLoMAAAAJ",
+    "full_name": "Samir CHTITA",
+    "affiliation": "Faculty of sciences Ben M'Sick, Hassan II University of Casablanca",
+    "research_interests": null,
+    "total_citations": 5867,
+    "h_index": 43,
+    "i10_index": 161,
+    "raw_sources": [
+      "raw_scholar_data.json"
+    ],
+    "source_statuses": {
+      "raw_scholar_data.json": "legacy"
+    }
+  },
+  {
+    "scholar_id": "peesMqoAAAAJ",
+    "full_name": "Sanaa EL FILALI",
+    "affiliation": "Full Professor of Computer Science, FSBM, University Hassan2 Casablanca",
+    "research_interests": [
+      "IOT",
+      "IA",
+      "Machine learning",
+      "NLP"
+    ],
+    "total_citations": 1263,
+    "h_index": 12,
+    "i10_index": 16,
+    "raw_sources": [
+      "new_scholar_data.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data.json": "complete"
+    }
+  },
+  {
+    "scholar_id": "i8X0MgkAAAAJ",
+    "full_name": "ABDESSAMAD BELANGOUR",
+    "affiliation": "BenMsik Faculty of Science, University Hassan II Casablanca, Morocco.",
+    "research_interests": [
+      "Software engineering",
+      "Artificial intelligence",
+      "Data science",
+      "Big Data",
+      "IoT"
+    ],
+    "total_citations": 1802,
+    "h_index": 23,
+    "i10_index": 61,
+    "raw_sources": [
+      "new_scholar_data.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data.json": "in_progress"
+    }
+  },
+  {
+    "scholar_id": "ntBEnvsAAAAJ",
+    "full_name": "Wadi Badri",
+    "affiliation": "université Hassan II de Casablanca",
+    "research_interests": [
+      "environnement",
+      "foresterie",
+      "bioclimatologie",
+      "botanique",
+      "phytogéographie"
+    ],
+    "total_citations": 1458,
+    "h_index": 18,
+    "i10_index": 26,
+    "raw_sources": [
+      "new_scholar_data.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "moH1YMsAAAAJ",
+    "full_name": "mina oumam",
+    "affiliation": "UH2C",
+    "research_interests": null,
+    "total_citations": 1961,
+    "h_index": 25,
+    "i10_index": 38,
+    "raw_sources": [
+      "new_scholar_data.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "QebcqNkAAAAJ",
+    "full_name": "Rachid SAILE",
+    "affiliation": "Vice-Président Université Hassan II de Casablanca",
+    "research_interests": [
+      "Biologie"
+    ],
+    "total_citations": 2873,
+    "h_index": 27,
+    "i10_index": 56,
+    "raw_sources": [
+      "new_scholar_data.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "iKIUSQIAAAAJ",
+    "full_name": "Abourriche Abdelmjid",
+    "affiliation": "Hassan II university of Casablanca",
+    "research_interests": [
+      "organic chemistry",
+      "marine natural products",
+      "drug and food research"
+    ],
+    "total_citations": 2929,
+    "h_index": 27,
+    "i10_index": 41,
+    "raw_sources": [
+      "new_scholar_data.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "rjrWg60AAAAJ",
+    "full_name": "said benkaddour",
+    "affiliation": "professeur de mathématiques, université Hassan II Casablanca",
+    "research_interests": [
+      "théorie du point fixe",
+      "des ensembles flous",
+      "logique algébrique"
+    ],
+    "total_citations": 5,
+    "h_index": 1,
+    "i10_index": 0,
+    "raw_sources": [
+      "new_scholar_data.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data.json": "complete"
+    }
+  },
+  {
+    "scholar_id": "hIN0ScAAAAAJ",
+    "full_name": "Soumia Mordane",
+    "affiliation": "université hassan II",
+    "research_interests": [
+      "Mécanique"
+    ],
+    "total_citations": 688,
+    "h_index": 12,
+    "i10_index": 17,
+    "raw_sources": [
+      "new_scholar_data.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "aKcwH1kAAAAJ",
+    "full_name": "Anass Kettani",
+    "affiliation": "Laboratory of Biology and Health, Faculty of Sciences Ben M'Sik Hassan II University of Casablanca",
+    "research_interests": [
+      "Biochemistry",
+      "Entrepreneurship",
+      "Incubation",
+      "Quality"
+    ],
+    "total_citations": 1071,
+    "h_index": 17,
+    "i10_index": 30,
+    "raw_sources": [
+      "new_scholar_data.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "w3Uyl9kAAAAJ",
+    "full_name": "RACHIDA AIT ABDELOUAHID",
+    "affiliation": "University Hassan II",
+    "research_interests": [
+      "Internet of Things"
+    ],
+    "total_citations": 1356,
+    "h_index": 14,
+    "i10_index": 18,
+    "raw_sources": [
+      "new_scholar_data_batch2.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch2.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "-_RLt1UAAAAJ",
+    "full_name": "Zaouch Amal",
+    "affiliation": "Professeure d'informatique",
+    "research_interests": [
+      "informatique"
+    ],
+    "total_citations": 28,
+    "h_index": 2,
+    "i10_index": 1,
+    "raw_sources": [
+      "new_scholar_data_batch2.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch2.json": "complete"
+    }
+  },
+  {
+    "scholar_id": "xjxxn0cAAAAJ",
+    "full_name": "mohammed aitdaoud",
+    "affiliation": "Laboratory of Artificial Intelligence and Systems/ORDIPU, Faculty of Sciences Ben M'Sik, Hassan II",
+    "research_interests": [
+      "Education Data Mining",
+      "Human-Computer Interaction",
+      "Educational Technology",
+      "Science Education"
+    ],
+    "total_citations": 189,
+    "h_index": 8,
+    "i10_index": 7,
+    "raw_sources": [
+      "new_scholar_data_batch2.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch2.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "EhsD_L4AAAAJ",
+    "full_name": "KHADIJA ACHTAICH",
+    "affiliation": "Faculté des Sciences Ben M'Sick",
+    "research_interests": [
+      "NLP",
+      "Chatbot",
+      "Health chatbots",
+      "AI"
+    ],
+    "total_citations": 94,
+    "h_index": 5,
+    "i10_index": 2,
+    "raw_sources": [
+      "new_scholar_data_batch2.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch2.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "ixCm7WYAAAAJ",
+    "full_name": "Youssef Sekhara",
+    "affiliation": "Professeur d'informatique , Facuté Benmsick, Université Hassan II",
+    "research_interests": [
+      "Informatique",
+      "Intelligence Artificielle"
+    ],
+    "total_citations": 18,
+    "h_index": 3,
+    "i10_index": 0,
+    "raw_sources": [
+      "new_scholar_data_batch2.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch2.json": "complete"
+    }
+  },
+  {
+    "scholar_id": "6TfW2X0AAAAJ",
+    "full_name": "Driss Bouggar",
+    "affiliation": "Unknown affiliation",
+    "research_interests": null,
+    "total_citations": 57,
+    "h_index": 4,
+    "i10_index": 1,
+    "raw_sources": [
+      "new_scholar_data_batch2.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch2.json": "complete"
+    }
+  },
+  {
+    "scholar_id": "ExZwFJoAAAAJ",
+    "full_name": "MOHTADI Karima",
+    "affiliation": "Laboratoire Biologie et Santé, Département de Biologie, Faculté des Sciences Ben M'sick, Université",
+    "research_interests": [
+      "Biologie"
+    ],
+    "total_citations": 282,
+    "h_index": 7,
+    "i10_index": 6,
+    "raw_sources": [
+      "new_scholar_data_batch2.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch2.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "y3H-SrEAAAAJ",
+    "full_name": "Halima LEBRAZI",
+    "affiliation": "Université Hassan II de Casablanca",
+    "research_interests": [
+      "Biologie"
+    ],
+    "total_citations": 550,
+    "h_index": 12,
+    "i10_index": 13,
+    "raw_sources": [
+      "new_scholar_data_batch2.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch2.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "0KSJLhAAAAAJ",
+    "full_name": "TANANE Omar",
+    "affiliation": "Professeur Faculté des Sciences Ben Msik ​Physical Chemistry, Materials and Catalysis Laboratory",
+    "research_interests": [
+      "Corrosion",
+      "environnement",
+      "Brevets",
+      "Energie Solaire",
+      "Formation continue"
+    ],
+    "total_citations": 2828,
+    "h_index": 19,
+    "i10_index": 26,
+    "raw_sources": [
+      "new_scholar_data_batch2.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch2.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "SAAqKKsAAAAJ",
+    "full_name": "Boubker MEHDAOUI",
+    "affiliation": "Professeur assistant à l'université Hassan II, Casablanca",
+    "research_interests": [
+      "magnetic hyperthermia",
+      "magnetic materials",
+      "inorganic chemistry",
+      "condensed matter physics"
+    ],
+    "total_citations": 3198,
+    "h_index": 13,
+    "i10_index": 18,
+    "raw_sources": [
+      "new_scholar_data_batch2.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch2.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "tIzgYIoAAAAJ",
+    "full_name": "Asmaa BENBIYI",
+    "affiliation": "Professeur de Chimie, FSBM, Université Hassan II - Casablanca",
+    "research_interests": [
+      "Thermodynamique",
+      "Chimie-physique",
+      "Environnement"
+    ],
+    "total_citations": 430,
+    "h_index": 13,
+    "i10_index": 18,
+    "raw_sources": [
+      "new_scholar_data_batch3.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch3.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "8X0-WxsAAAAJ",
+    "full_name": "aziz boutouil",
+    "affiliation": "PHD, Electrochimie-corrosion,université de Cadi Ayyad",
+    "research_interests": [
+      "Corrosion",
+      "EIS",
+      "Adsorption",
+      "DFT calculation",
+      "MD simulations"
+    ],
+    "total_citations": 447,
+    "h_index": 11,
+    "i10_index": 11,
+    "raw_sources": [
+      "new_scholar_data_batch3.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch3.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "XytSkkwAAAAJ",
+    "full_name": "Chaouki Sadik",
+    "affiliation": "Équipe de Géomatériaux et Matériaux pour l'Énergie",
+    "research_interests": [
+      "Clay",
+      "Traditional ceramics",
+      "Raw materials",
+      "Refractories"
+    ],
+    "total_citations": 1401,
+    "h_index": 20,
+    "i10_index": 29,
+    "raw_sources": [
+      "new_scholar_data_batch3.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch3.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "zrGeAWgAAAAJ",
+    "full_name": "Fouad ALLOUN",
+    "affiliation": "Professor, Faculty of Science Ben M'sik, Hassan II University in Casablanca",
+    "research_interests": [
+      "Crystallography",
+      "Magnetic properties",
+      "Ionic conductivity",
+      "Electrocatalysis"
+    ],
+    "total_citations": 57,
+    "h_index": 4,
+    "i10_index": 3,
+    "raw_sources": [
+      "new_scholar_data_batch3.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch3.json": "complete"
+    }
+  },
+  {
+    "scholar_id": "idesK9gAAAAJ",
+    "full_name": "Said BAKKALI",
+    "affiliation": "Professeur de chimie université Hassan II",
+    "research_interests": [
+      "Electrochemistry"
+    ],
+    "total_citations": 222,
+    "h_index": 9,
+    "i10_index": 9,
+    "raw_sources": [
+      "new_scholar_data_batch3.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch3.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "R7b0F7cAAAAJ",
+    "full_name": "soufiane zerraf",
+    "affiliation": "Hassan II university of Casablanca",
+    "research_interests": [
+      "chimie physique des matériaux"
+    ],
+    "total_citations": 119,
+    "h_index": 7,
+    "i10_index": 6,
+    "raw_sources": [
+      "new_scholar_data_batch3.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch3.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "G0zEVVUAAAAJ",
+    "full_name": "Younes Abboud",
+    "affiliation": "Professeur de Chimie Faculté des Science Ben M'Sik Casablanca Maroc",
+    "research_interests": [
+      "étude et inhibition de Corrosion",
+      "Synthèse caractérisation et application des nanoparticules"
+    ],
+    "total_citations": 3676,
+    "h_index": 26,
+    "i10_index": 37,
+    "raw_sources": [
+      "new_scholar_data_batch3.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch3.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "FJUvtg8AAAAJ",
+    "full_name": "Nahli abdelmottalib",
+    "affiliation": "Hassan II University of Casablanca",
+    "research_interests": [
+      "Ecologie et Gestion de l'Environnement"
+    ],
+    "total_citations": 90,
+    "h_index": 6,
+    "i10_index": 1,
+    "raw_sources": [
+      "new_scholar_data_batch3.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch3.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "BhRwnEcAAAAJ",
+    "full_name": "Loubna BENIDIRE",
+    "affiliation": "Microbiologie",
+    "research_interests": [
+      "Biotechnologie microbienne",
+      "Rhizobia",
+      "PGPR",
+      "plantes",
+      "stress"
+    ],
+    "total_citations": 740,
+    "h_index": 15,
+    "i10_index": 17,
+    "raw_sources": [
+      "new_scholar_data_batch3.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch3.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "cWLIf40AAAAJ",
+    "full_name": "NADIA IOUNES",
+    "affiliation": "laboratoire d'Ecologie et Environnement",
+    "research_interests": [
+      "écotoxicologie et environnement"
+    ],
+    "total_citations": 157,
+    "h_index": 8,
+    "i10_index": 3,
+    "raw_sources": [
+      "new_scholar_data_batch3.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch3.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "FPo3tVoAAAAJ",
+    "full_name": "abdelhafid bassou",
+    "affiliation": "professeur de mathématiques, Université Hassan II",
+    "research_interests": [
+      "analyse fonctionnelle",
+      "théorie du point fixe"
+    ],
+    "total_citations": 78,
+    "h_index": 4,
+    "i10_index": 2,
+    "raw_sources": [
+      "new_scholar_data_batch3.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch3.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "QTr_ct4AAAAJ",
+    "full_name": "ABDERRAHIM EL ADRAOUI",
+    "affiliation": "Laboratoire Analyse, Modélisation et Simulation, Université Hassan II de Casablanca, Maroc",
+    "research_interests": [
+      "Analyse fonctionnelle",
+      "Théorie du point fixe",
+      "Mathématiques discrètes",
+      "Théorie des graphes"
+    ],
+    "total_citations": 68,
+    "h_index": 5,
+    "i10_index": 2,
+    "raw_sources": [
+      "new_scholar_data_batch3.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch3.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "RlUhpMYAAAAJ",
+    "full_name": "adnane boukhouima",
+    "affiliation": "Laboratory of Analysis, Modeling and Simulation (LAMS), Faculty of Sciences Ben M'sik, Hassan II",
+    "research_interests": [
+      "Mathématiques appliquées"
+    ],
+    "total_citations": 552,
+    "h_index": 9,
+    "i10_index": 9,
+    "raw_sources": [
+      "new_scholar_data_batch3.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch3.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "fEERQmoAAAAJ",
+    "full_name": "Bouchra Aharmim",
+    "affiliation": "Professeur de Mathématiques,  Faculté des sciences Ben Msik,  Université Hassan II de Casablanca",
+    "research_interests": [
+      "Théorie des opérateurs",
+      "Théorie spectrale",
+      "Analyse fonctionnelle"
+    ],
+    "total_citations": 26,
+    "h_index": 2,
+    "i10_index": 1,
+    "raw_sources": [
+      "new_scholar_data_batch3.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch3.json": "complete"
+    }
+  },
+  {
+    "scholar_id": "co3r6zAAAAAJ",
+    "full_name": "El Mehdi Lotfi",
+    "affiliation": "Researcher, Faculty of Sciences Ben M'sik, Hassan II University, Casablanca, Morocco.",
+    "research_interests": [
+      "Mathematical Analysis of Dynamical Systems",
+      "Mathematical Modeling in Virology and Epidemiology",
+      "Control Systems"
+    ],
+    "total_citations": 576,
+    "h_index": 12,
+    "i10_index": 13,
+    "raw_sources": [
+      "new_scholar_data_batch3.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch3.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "51svnvMAAAAJ",
+    "full_name": "Hassan LAARABI",
+    "affiliation": "LAMS, Facultés des Sciences Ben M'Sik, Université Hassan 2",
+    "research_interests": [
+      "Mathématiques Appliquées"
+    ],
+    "total_citations": 511,
+    "h_index": 11,
+    "i10_index": 12,
+    "raw_sources": [
+      "new_scholar_data_batch3.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch3.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "MneM6ocAAAAJ",
+    "full_name": "Imane Agmour",
+    "affiliation": "Docteur en Mathématiques Appliquées",
+    "research_interests": [
+      "Modelisation mathématique"
+    ],
+    "total_citations": 985,
+    "h_index": 21,
+    "i10_index": 37,
+    "raw_sources": [
+      "new_scholar_data_batch3.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch3.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "5ap2WIIAAAAJ",
+    "full_name": "Adnaoui khalid",
+    "affiliation": "Laboratory of Analysis Modeling and Simulation, Department of Mathematics and Computer Science",
+    "research_interests": [
+      "Mathematical modeling and simulation"
+    ],
+    "total_citations": 59,
+    "h_index": 4,
+    "i10_index": 2,
+    "raw_sources": [
+      "new_scholar_data_batch3.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch3.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "AF7HTzkAAAAJ",
+    "full_name": "Malika IZID",
+    "affiliation": "Maitre de conférence",
+    "research_interests": [
+      "Mathématiques",
+      "Informatique et Traitement de l'information"
+    ],
+    "total_citations": 51,
+    "h_index": 3,
+    "i10_index": 2,
+    "raw_sources": [
+      "new_scholar_data_batch3.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch3.json": "complete"
+    }
+  },
+  {
+    "scholar_id": "J8JyWLYAAAAJ",
+    "full_name": "Zakary Omar",
+    "affiliation": "Faculty of Sciences Ben M’Sik, Hassan II University of Casablanca",
+    "research_interests": [
+      "bio-mathematics",
+      "optimal control",
+      "mathematics",
+      "epidemiology",
+      "linear and non linear systems"
+    ],
+    "total_citations": 647,
+    "h_index": 14,
+    "i10_index": 15,
+    "raw_sources": [
+      "new_scholar_data_batch3.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch3.json": "partial_limited"
+    }
+  },
+  {
+    "scholar_id": "0Q-T8x4AAAAJ",
+    "full_name": "Abdelilah AKOUIBAA",
+    "affiliation": "professor of physics, Faculty of sciences Ben M'sick, Hassan 2 University Casablanca",
+    "research_interests": [
+      "plasmonic nanomaterials"
+    ],
+    "total_citations": 362,
+    "h_index": 14,
+    "i10_index": 17,
+    "raw_sources": [
+      "new_scholar_data_batch3.json"
+    ],
+    "source_statuses": {
+      "new_scholar_data_batch3.json": "partial_limited"
+    }
+  }
+]
