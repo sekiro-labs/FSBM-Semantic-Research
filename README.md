@@ -4,7 +4,7 @@
 
 ## Project overview
 
-This academic project explores a representative, **partial** sample of researchers from the Faculté des Sciences Ben M'Sick (FSBM), Université Hassan II de Casablanca. It collects Google Scholar profiles and publications, consolidates and cleans their metadata, embeds available abstracts with zembed-1, and provides cosine semantic search through a CLI, FastAPI, and a Jupyter notebook.
+This academic project explores a **partial** sample assembled from the project faculty input and Google Scholar collection for the Faculté des Sciences Ben M'Sick (FSBM), Université Hassan II de Casablanca. It consolidates and cleans publication metadata, embeds available abstracts with zembed-1, and provides cosine semantic search through a CLI, FastAPI, and a Jupyter notebook. Scholar affiliation strings are source metadata, not independent confirmation of current FSBM employment; some profiles do not explicitly establish that affiliation. See `data/input/coverage_audit.md` for coverage and provenance notes.
 
 ## Objectives
 
@@ -16,7 +16,7 @@ This academic project explores a representative, **partial** sample of researche
 
 | Measure | Final corpus |
 | --- | ---: |
-| Unique researchers | 77 |
+| Collected researcher profiles | 77 |
 | Raw publication records | 1,044 |
 | Unique cleaned publications | 959 |
 | Eligible for embeddings | 895 |
@@ -24,7 +24,7 @@ This academic project explores a representative, **partial** sample of researche
 | Final embedding vectors | 895 × 2,560 |
 | Final ChromaDB records | 895 |
 
-Counts come from `data/clean/data_quality_report.json` and `data/embeddings/final_manifest.json`. The sample is not a census of FSBM research.
+Counts come from `data/clean/data_quality_report.json` and `data/embeddings/final_manifest.json`. The sample is not a census of FSBM research; 76 of the 77 collected profiles have at least one publication in the clean corpus.
 
 ## Architecture
 
@@ -58,7 +58,7 @@ tests/               Offline tests and mocked API/search checks
 frontend/            React + Vite academic interface
 ```
 
-The selection files and four raw JSON sources are retained as provenance for **one consolidated dataset**. They are not separate final corpora. The former local index is retained only as a migration source and is excluded from Git.
+The `new_researchers_batch2.json` and `new_researchers_batch3.json` selections and their corresponding raw JSON files record successive collection batches for **one consolidated dataset**. Their validation scripts are retained for reproducibility. Batch names do not denote separate final corpora. The historical 380-vector `data/embeddings/manifest.json` documents the migration source; `data/embeddings/final_manifest.json` is authoritative for the final 895-vector corpus. Terms such as *legacy*, *incremental*, and *checkpoint* describe migration and resume mechanics, not unfinished project phases.
 
 ## Installation
 
@@ -73,11 +73,11 @@ python -m pip install -r requirements.txt
 
 The requirements keep `bibtexparser<2` for compatibility with `scholarly`; they do not select a machine-specific CUDA build. No environment variable or credential is required for local data exploration. The pinned zembed-1 revision is `cf13c81f3274394053d166740294f7eea4586f7a`. Loading it for live search requires its model weights to be available; the model cache is **not** part of this repository.
 
-### Generated search artifacts
+### Search artifacts
 
-Raw and clean datasets are small enough to version directly. The final NPZ (`data/embeddings/final_publication_embeddings.npz`) and complete ChromaDB directory (`data/vector_db_final/`) are intentionally excluded from ordinary Git commits. To run search from a fresh clone, obtain the matching validated artifacts from the project's release/submission package and place them at those exact paths. The committed `final_manifest.json` uses paths relative to the project root. Both artifacts must match its model, collection, corpus hash, dimension, and record count. Do not substitute another model or rebuild the index merely to open the notebook.
+Raw and clean datasets are small enough to version directly. Generated search binaries are intentionally excluded from normal source control: `data/embeddings/final_publication_embeddings.npz` (895 vectors of dimension 2,560) and the complete `data/vector_db_final/` ChromaDB directory (cosine metric). They use only `zeroentropy/zembed-1-embedding`, with the revision recorded in `data/embeddings/final_manifest.json`. **Download/package location: pending creation of a GitHub release.** Until that package exists, a fresh clone can explore committed data but cannot perform live semantic search. Once available, place the matching artifacts at those exact paths. The committed final manifest uses paths relative to the project root; both artifacts must match its model, collection, corpus hash, dimension, and record count. The model weights/cache are **not distributed**. Do not substitute another model or rebuild the index merely to open the notebook.
 
-The notebook's normal exploration cells work with the committed clean data and report; its vector/index validation cells require the distributed artifacts. Live search is optional and loads the large model only on request.
+The notebook's data-exploration cells work with the committed clean data and report; vector/index validation cells print `SKIPPED` if their optional artifacts are absent. Live search is optional and loads the large model only on request, after the artifacts and model cache are installed.
 
 ## Web scraping
 
@@ -95,9 +95,9 @@ python src/preprocessing/merge_raw_data.py
 
 ## Optional public PDF enrichment
 
-The semantic-search corpus uses cleaned abstracts; PDF enrichment is a separate, optional stage. It does **not** change the main cleaned dataset, embeddings, ChromaDB index, semantic search, API, or frontend. The stage first uses existing publication metadata (including DOI-bearing URLs). It then checks OpenAlex open-access metadata by DOI or strictly matched title, year, and available author information. An ordinary article landing page is not treated as a PDF. Discovery records candidate PDF URLs and their provenance; it does not transfer papers.
+The semantic-search corpus uses cleaned abstracts; PDF enrichment is a separate, optional stage. The consolidated clean dataset originally has **0 validated PDF URLs**. Enrichment does **not** change the main cleaned dataset, embeddings, ChromaDB index, semantic search, API, or frontend. The current API and frontend expose consolidated publication metadata and semantic search; locally downloaded PDFs are not required for the main application. The stage first uses existing publication metadata (including DOI-bearing URLs). It then checks OpenAlex open-access metadata by DOI or strictly matched title, year, and available author information. An ordinary article landing page is not treated as a PDF. Discovery records candidate PDF URLs and their provenance; it does not transfer papers.
 
-**Measured checkpoint (20 September 2026):** The consolidated dataset contains **959** publications, and **959** were selected for the full enrichment run. Upstream rate limiting stopped that run after **231** publications were actually checked. Those checks found **74** candidate PDF URLs; **11** PDFs were successfully downloaded and validated. The remaining **728** publications were not checked in this run. The 231 checked records comprise 11 downloaded, 17 invalid PDF responses, 156 with no PDF found, 6 restricted, 38 disallowed by robots.txt, 2 errors, and 1 rate-limited record. Candidate URLs are discovery leads, not validated PDFs.
+**Measured checkpoint (20 September 2026):** The consolidated dataset contains **959** publications, and **959** were selected for the full enrichment run. Upstream rate limiting stopped that run after **231** publications were actually checked. Those checks found **74** candidate PDF URLs; **11** PDFs were successfully downloaded and validated. The remaining **728** publications were not checked in this run. The 231 checked records comprise 11 downloaded, 17 invalid PDF responses, 156 with no PDF found, 6 restricted, 38 disallowed by robots.txt, 2 errors, and 1 rate-limited record. Candidate URLs are discovery leads, not validated PDFs. The clean-data report's 0 PDF URLs and this separate enrichment checkpoint therefore measure different stages.
 
 From the repository root, start with a **small discovery-only** run:
 
@@ -196,7 +196,7 @@ python -m unittest discover -s tests -q
 
 ## Reproducibility
 
-The committed raw files, cleaned JSON/Parquet, quality report, source code, tests, notebook, and manifest reproduce the academic analysis. Generated vector and Chroma artifacts are distributed separately; copy the matching files into `data/embeddings/` and `data/vector_db_final/` for live search. The preserved collection selections and raw files document where the consolidated corpus came from. Regeneration commands above are optional and write outputs, so they are not part of normal notebook execution.
+The committed raw files, cleaned JSON/Parquet, quality report, source code, tests, notebook, and final manifest document the academic analysis. Generated vector and Chroma artifacts are excluded from Git; their package location is pending a GitHub release. After distribution, copy the matching files to the paths in **Search artifacts** for live search. The preserved collection selections and raw files document where the consolidated corpus came from. Regeneration commands above are optional and write outputs, so they are not part of normal notebook execution.
 
 ## Academic context
 

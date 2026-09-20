@@ -184,6 +184,12 @@ class IncrementalTest(unittest.TestCase):
                 indexer.load_incremental(path, [row("a", "text")])
 
     def test_actual_legacy_artifacts_are_read_only_and_reusable(self):
+        required = [incremental.OLD_ARTIFACT, incremental.OLD_MANIFEST,
+                    incremental.OLD_SQLITE,
+                    incremental.MODEL_CACHE / "snapshots" / incremental.MODEL_REVISION]
+        missing = [str(path) for path in required if not path.exists()]
+        if missing:
+            self.skipTest("Optional legacy migration artifacts/cache absent: " + ", ".join(missing))
         rows = incremental.load_final_rows()
         vectors, documents, manifest = incremental.read_old_vectors()
         report = incremental.audit(rows, vectors, documents)

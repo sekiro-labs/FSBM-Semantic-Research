@@ -1,6 +1,6 @@
-# Phase 2 coverage audit
+# Historical collection coverage audit (Phase 2 snapshot)
 
-The input list has 97 rows and 93 distinct Scholar IDs. The baseline has 37 profiles. There are 56 distinct IDs not yet present. No laboratory/team field exists in either JSON file, so a laboratory distribution cannot be calculated from the dataset.
+This document records the collection state at the Phase 2 audit, before later researcher batches. Its "available" IDs were not yet represented **at that time**; the list is not a current gap report. The original input list has 97 rows and 93 distinct Scholar IDs. The baseline then had 37 profiles, leaving 56 distinct IDs not yet present. No laboratory/team field exists in either JSON file, so a laboratory distribution could not be calculated from that snapshot. The final consolidated corpus and current counts are documented in `README.md` and `data/clean/data_quality_report.json`.
 
 ## Existing profiles (37)
 
@@ -44,7 +44,7 @@ The input list has 97 rows and 93 distinct Scholar IDs. The baseline has 37 prof
 | BQ-SjWEAAAAJ | Samia YOUSFI | Enseignante a l'université de m'sila |
 | vdPyLoMAAAAJ | Samir CHTITA | Faculty of sciences Ben M'Sick, Hassan II University of Casablanca |
 
-## Available IDs (56)
+## IDs available at the Phase 2 snapshot (56)
 
 | Scholar ID | Name in input |
 |---|---|
