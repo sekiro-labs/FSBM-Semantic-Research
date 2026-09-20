@@ -1,7 +1,5 @@
 .venv/
-.phase2_deps/
-.phase3_deps/
-.phase_final_deps/
+.phase*_deps/
 .hf_cache/
 .cache/
 .huggingface/
@@ -28,11 +26,8 @@ Desktop.ini
 *.swo
 *.sqlite3-wal
 *.sqlite3-shm
-data/clean/processed_abstracts.json
-data/clean/processed_abstracts.parquet
 data/papers/*
 !data/papers/.gitkeep
-vector_store/
 data/vector_db/
 data/vector_db_final/
 data/embeddings/final_publication_embeddings.npz
