@@ -53,6 +53,7 @@ src/
   api/               FastAPI demonstration service
 notebooks/           Academic demonstration notebook
 tests/               Offline tests and mocked API/search checks
+frontend/            React + Vite academic interface
 ```
 
 The selection files and four raw JSON sources are retained as provenance for **one consolidated dataset**. They are not separate final corpora. The former local index is retained only as a migration source and is excluded from Git.
@@ -131,6 +132,24 @@ Swagger documentation: <http://127.0.0.1:8000/docs>.
 | `GET /search?q=...&top_k=5` | Cosine semantic search |
 
 List endpoints support `page` and `page_size`; publications can be filtered by `year` and `researcher_id`. Example: <http://127.0.0.1:8000/search?q=machine%20learning%20medical%20diagnosis&top_k=5>. The first search request can be slow because zembed-1 loads lazily; later requests reuse the same service. Other API endpoints do not load the model.
+
+## Frontend demonstration
+
+The React, TypeScript, and Vite interface in `frontend/` includes a dashboard, semantic search, researcher and publication lists, and detail pages. It reads the existing FastAPI endpoints; search is sent only after a user submits a query. Copy `frontend/.env.example` to `frontend/.env` only if you need to change `VITE_API_BASE_URL` (default: `http://127.0.0.1:8000`). The API already allows the local Vite origins on port 5173.
+
+Open two PowerShell terminals from the repository root:
+
+```powershell
+# Terminal 1 — API
+.\.venv\Scripts\python.exe -m uvicorn src.api.main:app --host 127.0.0.1 --port 8000
+
+# Terminal 2 — frontend
+cd frontend
+npm install
+npm run dev
+```
+
+Open <http://localhost:5173> for the interface and <http://127.0.0.1:8000/docs> for the API documentation. Use `npm run build` for a TypeScript check and production build, and `npm test` for mocked frontend tests. Vite's `dist/` and `node_modules/` directories are Git-ignored. Live semantic search still requires the matching final Chroma artifact and cached pinned model.
 
 ## Notebook demonstration
 

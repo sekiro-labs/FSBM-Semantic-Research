@@ -34,3 +34,8 @@ data/embeddings/final_publication_embeddings.npz
 data/embeddings/publication_embeddings.npz
 data/embeddings/publication_embeddings.bf16_trial.npz
 data/embeddings/query_evaluation.json
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
