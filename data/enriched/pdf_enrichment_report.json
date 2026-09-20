@@ -1,0 +1,16 @@
+{
+  "source_publications": 959,
+  "selected_publications": 50,
+  "checked_publications": 50,
+  "pdf_candidates": 13,
+  "downloaded_pdfs": 1,
+  "statuses": {
+    "downloaded": 1,
+    "error": 1,
+    "invalid_pdf": 6,
+    "not_found": 37,
+    "restricted": 1,
+    "robots_disallowed": 4
+  },
+  "updated_at": "2026-09-20T22:20:49.052631+00:00"
+}

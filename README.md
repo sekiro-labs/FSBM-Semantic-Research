@@ -42,12 +42,14 @@ data/
   input/             Researcher selections and coverage audit
   raw/               Preserved source profiles used for the consolidated corpus
   clean/             Consolidated researcher and publication data; quality report
+  enriched/          Optional PDF discovery metadata and report (created when run)
   embeddings/        Manifests; large NPZ vectors distributed separately
   vector_db_final/   Local final ChromaDB index; distributed separately
   papers/            Optional openly accessible PDFs
 src/
   scraping/          Resumable Scholar collection and selection validation
   preprocessing/     Normalization, deduplication, final consolidation
+  enrichment/        Optional public PDF discovery and explicit download
   embeddings/        Pinned zembed-1 encoding and resumable generation
   search/            Cosine semantic search and evaluation
   api/               FastAPI demonstration service
@@ -90,6 +92,24 @@ To reproduce the clean dataset **only when intentionally regenerating it**:
 ```powershell
 python src/preprocessing/merge_raw_data.py
 ```
+
+## Optional public PDF enrichment
+
+The semantic-search corpus uses cleaned abstracts; PDF enrichment is a separate, optional stage and does **not** change the clean dataset, embeddings, or ChromaDB. The stage first uses existing publication metadata (including DOI-bearing URLs). It then checks OpenAlex open-access metadata by DOI or strictly matched title, year, and available author information. An ordinary article landing page is not treated as a PDF. Discovery records candidate PDF URLs and their provenance; it does not transfer papers.
+
+From the repository root, start with a **small discovery-only** run:
+
+```powershell
+python -m src.enrichment.pdf_enrichment --limit 10
+```
+
+Only if you want to retrieve PDFs explicitly:
+
+```powershell
+python -m src.enrichment.pdf_enrichment --limit 10 --download
+```
+
+The output is checkpointed in `data/enriched/publications_with_pdf.json`, with a summary in `data/enriched/pdf_enrichment_report.json`. Validated public PDFs are saved under `data/papers/` and remain Git-ignored. Later runs skip completed records; `--force` rechecks them. Repeat `--article-id ID` to restrict a retry to specific records; combine it with `--force` to rediscover their open-access locations. Invalid download responses record HTTP, Content-Type, response-type, and validation diagnostics for future attempts. Optional flags include `--email` for an OpenAlex contact address, `--delay`, `--retries`, and `--timeout`. Checking the full corpus requires an explicit `--all` flag. Availability depends on external open-access metadata and robots/access rules. When no public PDF is found, the publication's original metadata, abstract, and references remain in the separate enrichment record and unchanged clean dataset. No paywall, CAPTCHA, authentication, or robots restriction is bypassed.
 
 ## Embeddings with zembed-1
 
