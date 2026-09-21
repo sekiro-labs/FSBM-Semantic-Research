@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from 'react-router'
+import fsbmLogo from '../assets/fsbm-universite-hassan-ii.png'
 
 const navigation = [
   { to: '/', label: 'Dashboard', end: true },
@@ -13,8 +14,11 @@ export function Layout() {
     <header className="site-header">
       <div className="header-inner">
         <NavLink to="/" className="brand" aria-label="FSBM Semantic Research home">
-          <span className="brand-mark" aria-hidden="true">FS</span>
-          <span><strong>FSBM Semantic Research</strong><small>Cartographie Sémantique des Publications Scientifiques</small></span>
+          <img className="brand-logo" src={fsbmLogo} width={1672} height={941}
+            alt="Logo de la Faculté des Sciences Ben M'Sick - Université Hassan II de Casablanca" />
+          <span className="brand-identity"><strong>FSBM Semantic Research</strong>
+            <small>Faculté des Sciences Ben M'Sick<br />Université Hassan II de Casablanca</small>
+          </span>
         </NavLink>
         <nav className="main-nav" aria-label="Main navigation">
           {navigation.map(item => <NavLink key={item.to} to={item.to} end={item.end}
